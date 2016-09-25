@@ -10,34 +10,11 @@ class Troco {
 
     protected PapelMoeda[] papeisMoeda;
     private int tamanho;
+    private int valor;
 
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[tamanho];
-        int count = 0;
-        while (valor % 100 != 0) {
-            count++;
-        }
-        papeisMoeda[5] = new PapelMoeda(100, count);
-        while (valor % 50 != 0) {
-            count++;
-        }
-        papeisMoeda[4] = new PapelMoeda(50, count);
-        while (valor % 20 != 0) {
-            count++;
-        }
-        papeisMoeda[3] = new PapelMoeda(20, count);
-        while (valor % 10 != 0) {
-            count++;
-        }
-        papeisMoeda[2] = new PapelMoeda(10, count);
-        while (valor % 5 != 0) {
-            count++;
-        }
-        papeisMoeda[1] = new PapelMoeda(5, count);
-        while (valor % 2 != 0) {
-            count++;
-        }
-        papeisMoeda[1] = new PapelMoeda(2, count);
+        this.valor= valor;
     }
 
     public Iterator<PapelMoeda> getIterator() {
